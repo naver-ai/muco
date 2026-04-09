@@ -18,5 +18,17 @@ Welcom to the official Pytorch implementation of MuCo!
 ## 📚 M3T dataset
 [[🤗 naver-ai/M3T]](https://huggingface.co/datasets/naver-ai/M3T)
 
-## 🛠️ Installation, training, evaluation, ...
-It will be updated soon!
+## 📂 MuCo Models
+
+| Model | Avg. MMEB |
+| :--- | :---: |
+| [[🤗 MuCo-2B-MMEB]](https://huggingface.co/naver-ai/MuCo-2B) | 70.1 |
+| [[🤗 MuCo-7B-MMEB]](https://huggingface.co/naver-ai/MuCo-7B) | 74.2 |
+
+> **Note:** Performance has been further optimized during the code release preparation. 😊
+
+---
+
+## 🛠️ Installation, Training, and Evaluation
+
+The complete code and scripts are scheduled for release between **April 13th and 17th**.
