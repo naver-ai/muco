@@ -13,6 +13,7 @@ Welcom to the official Pytorch implementation of MuCo!
 
 
 ## 🚀 News
+- **April 16, 2026** - Models and evaluation code are released!
 - **February 21, 2026** - MuCo is accepted to CVPR 2026!
 
 ## 📚 M3T dataset
@@ -22,13 +23,41 @@ Welcom to the official Pytorch implementation of MuCo!
 
 | Model | Avg. MMEB |
 | :--- | :---: |
-| [[🤗 MuCo-2B-MMEB]](https://huggingface.co/naver-ai/MuCo-2B) | 70.1 |
-| [[🤗 MuCo-7B-MMEB]](https://huggingface.co/naver-ai/MuCo-7B) | 74.2 |
+| [[🤗 MuCo-2B]](https://huggingface.co/naver-ai/MuCo-2B) | 70.1 |
+| [[🤗 MuCo-7B]](https://huggingface.co/naver-ai/MuCo-7B) | 74.2 |
 
 > **Note:** Performance has been further optimized during the code release preparation. 😊
 
 ---
 
-## 🛠️ Installation, Training, and Evaluation
 
-The complete code and scripts are scheduled for release between **April 13th and 17th**.
+## 🛠️ Installation
+
+```bash
+$ pip install -r requirements.txt
+```
+
+## 🗂️ Dataset Preparation
+```bash
+$ DATASET_FOLDER="./dataset" # Set your path here
+$ hf download naver-ai/M3T --repo-type dataset --local-dir ${DATASET_FOLDER}
+$ cd ${DATASET_FOLDER}
+$ python download_M3T_images.py
+$ python download_and_unzip_MMEB_images.py
+```
+
+## 🔥 Training
+
+Scripts will be updated soon.
+
+## 💯 Evaluation
+
+```bash
+torchrun --nproc_per_node=8 --master_port=10000 eval_mmeb.py \
+    --pooling eos \
+    --normalize \
+    --per_device_eval_batch_size 64 \
+    --model_name naver-ai/MuCo-2B \
+    --data_basedir ${DATASET_FOLDER}/MMEB_eval \
+    --encode_output_path ./results/MuCo-2B_MMEB
+```
