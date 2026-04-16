@@ -61,3 +61,31 @@ torchrun --nproc_per_node=8 --master_port=10000 eval_mmeb.py \
     --data_basedir ${DATASET_FOLDER}/MMEB_eval \
     --encode_output_path ./results/MuCo-2B_MMEB
 ```
+
+## Citation
+```
+@inproceedings{gu2026muco,
+    title={MuCo: Multi-turn Contrastive Learning for Multimodal Embedding Model},
+    author={Gu, Geonmo and Heo, Byeongho and Yu, Jaemyung and Hwang, Jaehui and Kim, Taekyung and Lee, Sangmin and Jun, HeeJae and Kang, Yoohoon and Yun, Sangdoo and Han, Dongyoon},
+    year={2026},
+    booktitle={Conference on Computer Vision and Pattern Recognition (CVPR)},
+}
+```
+
+## License
+```
+MuCo
+Copyright (c) 2026-present NAVER Cloud Corp.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+     http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+```
